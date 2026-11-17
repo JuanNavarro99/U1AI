@@ -7,42 +7,59 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f4f7f6;--ink:#14201d;--mute:#4d5d59;--teal:#1b6b64;--ochre:#b9801a;--line:#c9d4d1;--card:#ffffff;--hero:#123c38;--heroink:#f4f7f6;color-scheme:light dark}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1816;--ink:#e6eeec;--mute:#9fb0ac;--teal:#5fc2b8;--ochre:#e0a94a;--line:#2b3d39;--card:#16231f;--hero:#0a2926;--heroink:#e6eeec}}
+:root{--bg:#f4f7f6;--ink:#14201d;--mute:#4d5d59;--teal:#1b6b64;--ochre:#b9801a;--line:#c9d4d1;--card:#ffffff;--hero:#123c38;--heroink:#f4f7f6;--bar:#1b6b64;--bar2:#b9801a;color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1816;--ink:#e6eeec;--mute:#9fb0ac;--teal:#5fc2b8;--ochre:#e0a94a;--line:#2b3d39;--card:#16231f;--hero:#0a2926;--heroink:#e6eeec;--bar:#5fc2b8;--bar2:#e0a94a}}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.65 "Source Serif 4",Georgia,serif}
-h1,h2,h3,nav,th,.tag{font-family:"Bricolage Grotesque","Segoe UI",Arial,sans-serif}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 "Source Serif 4",Georgia,serif}
+h1,h2,h3,nav,th,.tag,.kicker,.num{font-family:"Bricolage Grotesque","Segoe UI",Arial,sans-serif}
 a{color:var(--teal)}
 a:focus-visible{outline:3px solid var(--ochre);outline-offset:2px}
-.hero{background:var(--hero);color:var(--heroink);padding:72px 20px 56px}
-.wrap{max-width:760px;margin:0 auto}
-.hero h1{font-size:clamp(2.4rem,8vw,4.4rem);line-height:1.02;margin:0 0 20px;font-weight:700;letter-spacing:-.02em}
-.hero p{margin:0 0 10px;max-width:56ch;opacity:.92}
-.hero .by{margin-top:28px;font-size:.95rem;opacity:.8}
-nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5;overflow-x:auto;white-space:nowrap;padding:10px 20px;font-size:.95rem}
-nav a{margin-right:18px;text-decoration:none;color:var(--ink);font-weight:500}
+.hero{background:var(--hero);color:var(--heroink);padding:80px 20px 60px}
+.wrap{max-width:820px;margin:0 auto}
+.hero h1{font-size:clamp(2.6rem,9vw,5rem);line-height:1;margin:0 0 22px;font-weight:700;letter-spacing:-.025em}
+.hero p{margin:0 0 10px;max-width:58ch;opacity:.93}
+.hero .by{margin-top:30px;font-size:.95rem;opacity:.8}
+nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5;overflow-x:auto;white-space:nowrap;padding:10px 20px;font-size:.92rem}
+nav a{margin-right:16px;text-decoration:none;color:var(--ink);font-weight:500}
 nav a:hover{color:var(--teal)}
-main{padding:12px 20px 64px}
-section{max-width:760px;margin:0 auto;padding:44px 0 8px;border-bottom:1px solid var(--line)}
+main{padding:8px 20px 64px}
+section{max-width:820px;margin:0 auto;padding:48px 0 12px;border-bottom:1px solid var(--line)}
 section:last-of-type{border-bottom:0}
-h2{font-size:clamp(1.7rem,5vw,2.3rem);line-height:1.15;margin:0 0 16px;letter-spacing:-.01em}
-h3{font-size:1.15rem;margin:28px 0 6px;color:var(--teal)}
+.kicker{font-size:.85rem;font-weight:700;color:var(--ochre);margin:0 0 4px}
+h2{font-size:clamp(1.8rem,5.5vw,2.5rem);line-height:1.1;margin:0 0 18px;letter-spacing:-.015em}
+h3{font-size:1.15rem;margin:30px 0 8px;color:var(--teal)}
 p{margin:0 0 14px}
-.tag{display:inline-block;font-size:.8rem;font-weight:700;background:var(--ochre);color:#1a1200;padding:2px 9px;border-radius:3px;margin-right:6px}
-.note{border-left:4px solid var(--ochre);background:var(--card);padding:12px 16px;margin:18px 0;font-size:.95rem;color:var(--mute)}
-.box{background:var(--card);border:1px solid var(--line);padding:16px 18px;margin:16px 0}
-.scroll{overflow-x:auto;margin:16px 0}
-table{border-collapse:collapse;width:100%;font-size:.92rem;min-width:560px}
-th,td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
-th{font-size:.88rem;color:var(--teal)}
-dt{font-family:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;font-weight:700;margin-top:20px;color:var(--teal)}
-dd{margin:4px 0 0}
 ul{padding-left:1.2em;margin:0 0 14px}
 li{margin-bottom:6px}
+.lead{font-size:1.12rem;color:var(--mute)}
+.tag{display:inline-block;font-size:.78rem;font-weight:700;background:var(--ochre);color:#1a1200;padding:2px 9px;border-radius:3px;margin-right:6px}
+.note{border-left:4px solid var(--ochre);background:var(--card);padding:12px 16px;margin:18px 0;font-size:.95rem;color:var(--mute)}
+.box{background:var(--card);border:1px solid var(--line);padding:16px 18px;margin:16px 0}
+.pull{font-family:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;font-size:1.35rem;line-height:1.3;font-weight:700;color:var(--teal);border-left:5px solid var(--ochre);padding:4px 0 4px 16px;margin:24px 0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0}
+.stat{background:var(--card);border:1px solid var(--line);padding:14px}
+.num{font-size:1.9rem;font-weight:700;line-height:1.1;color:var(--teal)}
+.stat small{display:block;color:var(--mute);font-size:.85rem;line-height:1.3;margin-top:4px}
+.chart{background:var(--card);border:1px solid var(--line);padding:16px 18px;margin:16px 0}
+.chart h4{margin:0 0 12px;font-family:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;font-size:1rem}
+.row{display:grid;grid-template-columns:minmax(110px,40%) 1fr;gap:10px;align-items:center;margin-bottom:8px;font-size:.88rem}
+.track{background:var(--line);height:22px;position:relative}
+.fill{height:100%;background:var(--bar);display:flex;align-items:center;justify-content:flex-end;padding-right:6px;color:#fff;font-size:.78rem;font-weight:700;min-width:34px}
+.fill.b{background:var(--bar2);color:#1a1200}
+.src-line{font-size:.8rem;color:var(--mute);margin:10px 0 0}
+.scroll{overflow-x:auto;margin:16px 0}
+table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:620px}
+th,td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+th{font-size:.86rem;color:var(--teal);background:var(--card)}
+td:first-child{font-weight:600}
+dt{font-family:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;font-weight:700;margin-top:18px;color:var(--teal)}
+dd{margin:4px 0 0}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
 .src{font-size:.88rem;color:var(--mute);word-break:break-word}
-.src li{margin-bottom:9px}
+.src li{margin-bottom:10px}
 footer{background:var(--hero);color:var(--heroink);padding:28px 20px;font-size:.9rem}
+@media (max-width:520px){.row{grid-template-columns:1fr;gap:3px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -51,146 +68,402 @@ footer{background:var(--hero);color:var(--heroink);padding:28px 20px;font-size:.
 <header class="hero">
 <div class="wrap">
 <h1>Lo público: lo que estudio y lo que viene</h1>
-<p>Revista digital sobre la Licenciatura en Administración Gubernamental y Políticas Públicas de la Universidad de Guadalajara (CUCEA): qué se estudia, cómo se compara con otras universidades, cuánto se gana y por qué la elegí.</p>
+<p>Revista digital sobre la Licenciatura en Administración Gubernamental y Políticas Públicas de la Universidad de Guadalajara (CUCEA): qué se estudia, cómo se compara con la UNAM y la Anáhuac, cuánto se gana y por qué la elegí.</p>
 <p class="by">Por Juan Angel Navarro Fregoso, primer semestre, CUCEA, Universidad de Guadalajara. Noviembre de 2026.</p>
 </div>
 </header>
 
 <nav aria-label="Secciones">
-<a href="#carrera">Mi carrera</a><a href="#comparativo">Comparativo</a><a href="#empleo">Empleo y salarios</a><a href="#ideas">Ideas</a><a href="#empresa">Empresa</a><a href="#reflexion">Reflexión</a><a href="#fuentes">Fuentes</a>
+<a href="#carrera">Mi carrera</a><a href="#comparativo">UdeG, UNAM y Anáhuac</a><a href="#jalisco">Jalisco</a><a href="#reconocimiento">Reconocimiento</a><a href="#empleo">Empleo</a><a href="#salarios">Salarios</a><a href="#oportunidades">Oportunidades</a><a href="#empresa">Empresa</a><a href="#reflexion">Reflexión</a><a href="#fuentes">Fuentes</a>
 </nav>
 
 <main>
 
+<!-- ============ 1. MI CARRERA ============ -->
 <section id="carrera">
+<p class="kicker">Capítulo 1</p>
 <h2>Mi carrera por dentro</h2>
-<p>Estudio la Licenciatura en Administración Gubernamental y Políticas Públicas (LAGP) en el Centro Universitario de Ciencias Económico Administrativas (CUCEA), en Zapopan, Jalisco. Su objetivo es formar profesionales con perspectiva sistémica de los asuntos públicos, capaces de trabajar en la gestión pública con herramientas convencionales e innovadoras, tanto en organismos gubernamentales como no gubernamentales.</p>
+<p class="lead">Estudio la Licenciatura en Administración Gubernamental y Políticas Públicas (LAGP) en el Centro Universitario de Ciencias Económico Administrativas (CUCEA), en Zapopan, Jalisco.</p>
+<p>Su objetivo es formar profesionales con visión sistémica de los asuntos públicos, capaces de trabajar en la gestión pública con herramientas convencionales e innovadoras, tanto en organismos de gobierno como en organizaciones no gubernamentales.</p>
 
-<h3>Perfil de ingreso y requisitos</h3>
-<p>El programa pide interés genuino por los procesos públicos y por el análisis de las políticas públicas en distintos niveles de gobierno. También espera razonamiento verbal, expresión oral y escrita, pensamiento analítico y crítico, capacidad de síntesis, creatividad, trabajo en equipo y apego a la normatividad institucional. Para entrar a cualquier licenciatura de la UdeG hay que presentar la Prueba de Aptitud Académica (PAA), y la puntuación de admisión se determina con la suma de los rubros que la universidad considera.</p>
+<h3>Perfil de ingreso</h3>
+<ul>
+<li>Interés por los procesos públicos y por el análisis de políticas públicas en distintos niveles de gobierno.</li>
+<li>Razonamiento verbal, expresión oral y escrita, pensamiento analítico y crítico, y capacidad de síntesis.</li>
+<li>Creatividad, trabajo en equipo y apego a la normatividad institucional.</li>
+<li>Requisito de ingreso: bachillerato concluido y presentar la Prueba de Aptitud Académica (PAA) de la UdeG, cuya puntuación entra en la selección.</li>
+</ul>
 
 <h3>Perfil de egreso</h3>
-<p>El egresado tendrá conocimientos y habilidades para analizar, diseñar, implementar y evaluar políticas públicas en los ámbitos local, estatal y nacional. Su campo de acción incluye los tres órdenes de gobierno, organismos autónomos y organizaciones de la sociedad civil.</p>
+<p>El egresado puede analizar, diseñar, implementar y evaluar políticas públicas en los ámbitos local, estatal y nacional. Su campo de acción abarca los tres órdenes de gobierno, los organismos autónomos y las organizaciones de la sociedad civil.</p>
 
-<h3>Plan de estudios</h3>
-<p>El mínimo para optar por el grado es de 398 créditos. Por reglamento, en un ciclo escolar se cursan entre 30 y 90 créditos, con un promedio de 60.</p>
-<div class="scroll"><table>
-<tr><th>Área de formación</th><th>Créditos</th><th>%</th></tr>
-<tr><td>Básica común obligatoria</td><td>86</td><td>21%</td></tr>
-<tr><td>Básica particular obligatoria</td><td>102</td><td>26%</td></tr>
-<tr><td>Especializante obligatoria</td><td>158</td><td>40%</td></tr>
-<tr><td>Especializante selectiva</td><td>24</td><td>6%</td></tr>
-<tr><td>Optativa abierta</td><td>28</td><td>7%</td></tr>
-<tr><td><strong>Total</strong></td><td><strong>398</strong></td><td><strong>100%</strong></td></tr>
-</table></div>
-<p>Entre las unidades de aprendizaje de la carrera están Administración I, Economía II, Diseño, Implementación y Evaluación de Políticas Públicas, Políticas Públicas Comparadas, Contabilidad y Fiscalización Gubernamental, Economía Aplicada a las Políticas Públicas, Tercer Sector y Políticas Públicas, Legislación en el ámbito gubernamental, Prácticas Profesionales y el Seminario de Titulación (6 créditos).</p>
+<h3>Plan de estudios: 398 créditos</h3>
+<div class="chart">
+<h4>Créditos por área de formación</h4>
+<div class="row"><span>Especializante obligatoria</span><div class="track"><div class="fill" style="width:40%">158</div></div></div>
+<div class="row"><span>Básica particular obligatoria</span><div class="track"><div class="fill" style="width:25.6%">102</div></div></div>
+<div class="row"><span>Básica común obligatoria</span><div class="track"><div class="fill" style="width:21.6%">86</div></div></div>
+<div class="row"><span>Optativa abierta</span><div class="track"><div class="fill b" style="width:7%">28</div></div></div>
+<div class="row"><span>Especializante selectiva</span><div class="track"><div class="fill b" style="width:6%">24</div></div></div>
+<p class="src-line">Escala: porcentaje del total de 398 créditos. Fuente: CUCEA, plan de estudios LAGP.</p>
+</div>
+<p>Por reglamento se cursan entre 30 y 90 créditos por ciclo, con un promedio de 60. La duración oficial en ciclos no aparece publicada en las páginas del programa. A ritmo promedio, 398 créditos equivalen a unos 7 ciclos (estimación propia: 398 ÷ 60).</p>
+
+<h3>Materias principales</h3>
+<ul>
+<li><strong>Base:</strong> Administración I y Economía II.</li>
+<li><strong>Políticas públicas:</strong> Diseño, Implementación y Evaluación de Políticas Públicas; Políticas Públicas Comparadas.</li>
+<li><strong>Recursos públicos:</strong> Contabilidad y Fiscalización Gubernamental; Economía Aplicada a las Políticas Públicas.</li>
+<li><strong>Entorno:</strong> Legislación en el ámbito gubernamental; Tercer Sector y Políticas Públicas.</li>
+<li><strong>Cierre:</strong> Prácticas Profesionales y Seminario de Titulación (6 créditos).</li>
+</ul>
 
 <h3>Calidad y titulación</h3>
-<p>La LAGP tiene el nivel más alto de calidad que otorga el Consejo Nacional de Acreditación de la Ciencia Económica (CONACE). Esa acreditación nacional se obtuvo el 17 de febrero de 2015 y está reconocida por COPAES. Entre las modalidades de titulación aprobadas el 13 de agosto de 2025 está el desempeño académico sobresaliente, que para esta carrera se acredita con el EGEL Plus en Ciencia Política y Administración Pública de CENEVAL.</p>
+<p>La LAGP cuenta con acreditación del nivel más alto del Consejo Nacional de Acreditación de la Ciencia Económica (CONACE), obtenida el 17 de febrero de 2015 y reconocida por COPAES. Entre las modalidades de titulación aprobadas el 13 de agosto de 2025 está el desempeño académico sobresaliente, que para esta carrera se acredita con el EGEL Plus en Ciencia Política y Administración Pública de CENEVAL.</p>
 
 <h3>Lo que me gusta, lo que no y lo que espero aprender</h3>
-<p>Me gusta que la carrera junta teoría con soluciones reales. En mi primer semestre ya vi economía, matemáticas, contabilidad y administración, y en mis trabajos he aplicado esas herramientas a problemas públicos, como relacionar la inversión de un presupuesto con la aprobación ciudadana o modelar una ola de COVID-19 con regresión cuadrática.</p>
-<p>Lo que me resulta más pesado es la carga cuantitativa del arranque, porque uno llega pensando en gobierno y se topa con matemáticas y contabilidad al mismo tiempo. Entiendo que son la base para leer un presupuesto o evaluar un programa, así que lo veo como parte de la formación.</p>
-<p>Espero aprender a diseñar una política pública, a implementarla y a evaluar si funcionó, y a leer cómo se gasta el dinero público.</p>
+<p><strong>Me gusta</strong> que la carrera junta teoría con problemas reales. En mi primer semestre vi economía, matemáticas, contabilidad y administración, y ya he aplicado esas herramientas a temas públicos, como relacionar el presupuesto con la aprobación ciudadana o modelar una ola de COVID-19 con regresión cuadrática.</p>
+<p><strong>Me resulta pesado</strong> el arranque cuantitativo: uno llega pensando en gobierno y se encuentra con matemáticas y contabilidad al mismo tiempo. Entiendo que son la base para leer un presupuesto o evaluar un programa.</p>
+<p><strong>Espero aprender</strong> a diseñar una política pública, a implementarla, a evaluar si funcionó y a entender cómo se gasta el dinero público.</p>
 
-<h3>Contenidos que comparte con otras carreras</h3>
-<p>El plan incluye un área básica común de 86 créditos dentro de CUCEA. Administración I aparece en la LAGP y también como antecedente de materias de la Licenciatura en Administración de CUCEA, y Economía y Contabilidad son terreno común con las carreras económico-administrativas. Frente a Ciencias Políticas, la LAGP se parece en teoría del Estado y análisis político, y se distingue por su peso en gestión, finanzas y evaluación de políticas.</p>
+<h3>Contenidos que comparten las carreras</h3>
+<p>El plan incluye un área básica común de 86 créditos dentro de CUCEA, con materias como Administración I y Economía II, que también se cursan en carreras económico-administrativas. Contabilidad es otro terreno común. Lo que distingue a la LAGP es que esas bases se aplican a gobierno: presupuesto público, fiscalización y evaluación de políticas.</p>
 </section>
 
+<!-- ============ 2. COMPARATIVO ============ -->
 <section id="comparativo">
-<h2>Cómo se compara con la UNAM y con otras universidades</h2>
-<p>Comparé mi programa con la UNAM, con una universidad privada reconocida a nivel nacional (Anáhuac), con una privada de Jalisco (UNIVA) y con otros programas públicos, mejores o peores en algún aspecto.</p>
+<p class="kicker">Capítulo 2</p>
+<h2>UdeG, UNAM y Anáhuac frente a frente</h2>
+<p class="lead">Comparé tres programas: el mío (pública, Jalisco), el de la UNAM (pública, referencia nacional) y el de la Universidad Anáhuac (privada de prestigio nacional).</p>
+
+<div class="chart">
+<h4>Tamaño del plan de estudios, en créditos</h4>
+<div class="row"><span>UdeG, CUCEA (LAGP)</span><div class="track"><div class="fill" style="width:100%">398</div></div></div>
+<div class="row"><span>Anáhuac (Adm. Pública y Gobierno)</span><div class="track"><div class="fill b" style="width:92.7%">369</div></div></div>
+<div class="row"><span>UNAM (Ciencias Políticas y Adm. Pública)</span><div class="track"><div class="fill" style="width:90.5%">360</div></div></div>
+<p class="src-line">Los créditos no son equivalentes entre universidades: cada una usa su sistema. Sirven para comparar el tamaño relativo de los planes. El total de Anáhuac es la suma de los bloques de su plan 2025 (42 + 12 + 249 + 24 + 15 + 27).</p>
+</div>
+
+<h3>Requisitos y perfiles</h3>
 <div class="scroll"><table>
-<tr><th>Institución</th><th>Programa</th><th>Créditos</th><th>Enfoque</th></tr>
-<tr><td>UdeG, CUCEA (pública, Zapopan)</td><td>Administración Gubernamental y Políticas Públicas</td><td>398</td><td>Análisis, diseño, implementación y evaluación de políticas públicas; gestión pública local, estatal y nacional.</td></tr>
-<tr><td>UdeG, CUCSH (pública)</td><td>Estudios Políticos y Gobierno</td><td>352</td><td>Terminales en Ciencia Política o Gestión Pública; docencia e investigación en ciencias políticas.</td></tr>
-<tr><td>UNAM, FCPyS (pública, CDMX)</td><td>Ciencias Políticas y Administración Pública, con opción Administración Pública u opción Ciencia Política</td><td>No confirmado</td><td>Una sola licenciatura con dos opciones; exige acreditar idioma para titularse.</td></tr>
-<tr><td>Universidad Anáhuac (privada)</td><td>Administración Pública y Gobierno (plan 2025)</td><td>249</td><td>Liderazgo político y social, teoría política, comunicación política.</td></tr>
-<tr><td>UNIVA (privada, Guadalajara)</td><td>Ciencia Política y Administración Pública</td><td>No confirmado</td><td>Comunicación política, opinión pública, campañas y partidos.</td></tr>
-<tr><td>Universidad de Guanajuato (pública)</td><td>Administración Pública</td><td>270</td><td>9 semestres; dirigir, gestionar y asesorar en el sector público.</td></tr>
+<tr><th>Aspecto</th><th>UdeG (CUCEA)</th><th>UNAM (FCPyS)</th><th>Anáhuac</th></tr>
+<tr><td>Requisitos de ingreso</td><td>Bachillerato concluido y Prueba de Aptitud Académica (PAA).</td><td>Bachillerato del área de Ciencias Sociales o con asignaturas relacionadas; concurso de selección con prueba escrita. El reglamento da prioridad a egresados de la ENP y el CCH.</td><td>Bachillerato o equivalente. El plan consultado no detalla el proceso de admisión; la universidad lo publica por separado.</td></tr>
+<tr><td>Perfil de ingreso</td><td>Análisis crítico, redacción, síntesis, trabajo en equipo e interés en lo público.</td><td>Formación previa en ciencias sociales.</td><td>Métodos numéricos, redacción, valoración de diferencias sociales y políticas, y noción del marco legal.</td></tr>
+<tr><td>Perfil de egreso</td><td>Analiza, diseña, implementa y evalúa políticas públicas en los tres órdenes de gobierno y en organizaciones civiles.</td><td>Estratega en decisiones y reforma de instituciones, en políticas financieras y en recomendaciones de gobierno, con métodos cuantitativos.</td><td>Liderazgo político y social; evalúa estrategias administrativas en los tres niveles de gobierno, los poderes Legislativo y Judicial, el servicio diplomático y organismos civiles.</td></tr>
+<tr><td>Duración</td><td>No publicada en ciclos; el plan se mide en créditos (30 a 90 por ciclo).</td><td>8 semestres en escolarizado; 9 en abierta y a distancia.</td><td>8 semestres (4 años), según un portal de orientación; el plan consultado no lo indica.</td></tr>
+<tr><td>Plan de estudios</td><td>398 créditos en cinco áreas; 40% son especializantes obligatorias.</td><td>360 créditos (288 obligatorios y 72 optativos), 45 asignaturas; tres semestres de tronco común.</td><td>369 créditos en seis bloques; incluye 480 horas de prácticas, cinco asignaturas en inglés y cinco en línea.</td></tr>
+<tr><td>Materias principales</td><td>Diseño, Implementación y Evaluación de Políticas Públicas; Contabilidad y Fiscalización Gubernamental; Economía Aplicada a las Políticas Públicas.</td><td>Políticas Públicas I y II; Gestión de Recursos Gubernamentales; Sistemas de Auditoría Gubernamental; Gestión de la Política Social.</td><td>Derecho Administrativo, Constitucional y Financiero; Políticas Públicas y Comparadas; Programación y Presupuesto; Gobierno Digital.</td></tr>
+<tr><td>Especialización</td><td>Área especializante: 158 créditos obligatorios y 24 selectivos.</td><td>Un solo título con dos opciones: Administración Pública o Ciencia Política.</td><td>Bloque profesional electivo de 24 créditos (minors) y 12 créditos de enfoque regional.</td></tr>
+<tr><td>Titulación</td><td>Modalidades aprobadas en 2025; opción EGEL Plus por desempeño sobresaliente.</td><td>Acreditar idioma (o dos comprensiones de lectura) y una opción de titulación.</td><td>Acreditar el EGEL, nivel de inglés y las 480 horas de prácticas.</td></tr>
 </table></div>
-<div class="note">Los créditos no se pueden comparar directamente entre universidades, porque cada una usa su propio sistema. Sirven para ver el tamaño relativo de cada plan, no para decir que uno vale más que otro. No pude confirmar los créditos ni la duración del programa de la UNAM y de UNIVA en fuentes oficiales, por eso aparecen como “No confirmado”.</div>
 
-<h3>Lo que muestra la comparación</h3>
+<h3>Qué las diferencia</h3>
 <ul>
-<li>La LAGP es la que más se concentra en políticas públicas como proceso completo (diseño, implementación y evaluación) y en gestión local.</li>
-<li>La UNAM y UNIVA mezclan ciencia política y administración pública en un mismo título, así que dan más peso al análisis político y electoral.</li>
-<li>Anáhuac pone el acento en el liderazgo político y social. La LAGP lo pone en la técnica de gestión y evaluación.</li>
-<li>Las públicas son más baratas, pero con más aspirantes que lugares. Según IMCO, la admisión de Administración pública en universidades públicas es de 25.0%.</li>
+<li><strong>Enfoque:</strong> la LAGP se concentra en el ciclo completo de una política pública y en gestión; la UNAM combina administración pública con ciencia política en un mismo título; Anáhuac pesa más lo jurídico (derecho constitucional, administrativo, financiero y electoral) y el liderazgo.</li>
+<li><strong>Especialización:</strong> en la UdeG el perfil es único; en la UNAM se elige entre dos opciones; en Anáhuac se arma con electivos y minors.</li>
+<li><strong>Práctica:</strong> Anáhuac exige 480 horas de prácticas profesionales y cursos en inglés; la UdeG incluye Prácticas Profesionales como materia.</li>
+<li><strong>Formación general:</strong> Anáhuac añade 42 créditos de bloque propio (antropología, ética, humanismo, liderazgo), algo que los otros dos planes no tienen.</li>
+<li><strong>Ingreso:</strong> la UNAM pide antecedente en ciencias sociales; las otras dos no lo hacen explícito.</li>
 </ul>
 
-<h3>Preguntas del trabajo sobre universidades</h3>
-<dl>
-<dt>¿Cuál universidad tiene mayor reconocimiento en México y en Jalisco para esta carrera?</dt>
-<dd>No encontré un ranking oficial por carrera para Administración Pública, así que no voy a nombrar una “mejor”. Lo verificable: mi programa tiene acreditación CONACE del nivel más alto, y la licenciatura de la UNAM en esta área existe desde 1951 con su primer plan de estudios.</dd>
-<dt>¿Qué otras universidades en Jalisco ofrecen la misma carrera?</dt>
-<dd>Dentro de la UdeG, además de CUCEA, el CUCSH ofrece Estudios Políticos y Gobierno con terminal en Gestión Pública. Entre las privadas encontré UNIVA con Ciencia Política y Administración Pública. Esta lista no es exhaustiva.</dd>
-</dl>
+<h3>Ventajas y desventajas</h3>
+<div class="cols">
+<div class="box"><strong>UdeG (CUCEA)</strong>
+<p><em>Ventajas:</em> especialización completa en políticas públicas; acreditación CONACE del nivel más alto; pública; cercana al gobierno de Jalisco.</p>
+<p><em>Desventajas:</em> es el plan con más créditos; duración en ciclos no publicada; ingreso por PAA con alta demanda.</p></div>
+<div class="box"><strong>UNAM (FCPyS)</strong>
+<p><em>Ventajas:</em> mayor trayectoria (la facultad inició actividades en 1951); dos opciones de especialización; universidad mejor ubicada de México en QS 2026.</p>
+<p><em>Desventajas:</em> perfil más político que de gestión; exige antecedente en ciencias sociales; sede principal en Ciudad de México.</p></div>
+<div class="box"><strong>Anáhuac</strong>
+<p><em>Ventajas:</em> prácticas obligatorias, inglés y minors; formación jurídica fuerte.</p>
+<p><em>Desventajas:</em> es privada y no encontré una cifra de colegiatura verificable en fuente oficial; el plan consultado no es de Jalisco.</p></div>
+</div>
 </section>
 
+<!-- ============ 3. JALISCO ============ -->
+<section id="jalisco">
+<p class="kicker">Capítulo 3</p>
+<h2>¿Quién la ofrece en Jalisco?</h2>
+<p>Separé dos categorías: la misma licenciatura y las carreras afines. No incluí instituciones solo porque tengan un nombre parecido.</p>
+<div class="scroll"><table>
+<tr><th>Categoría</th><th>Institución y programa</th><th>Por qué entra</th></tr>
+<tr><td>Misma licenciatura</td><td>Universidad de Guadalajara, CUCEA: Administración Gubernamental y Políticas Públicas.</td><td>Es el programa que estudio y el único que encontré con ese nombre y enfoque en Jalisco.</td></tr>
+<tr><td>Carrera afín</td><td>Universidad de Guadalajara, CUCSH: Estudios Políticos y Gobierno, con terminales en Ciencia Política y Gestión Pública.</td><td>Comparte el campo de gestión pública, pero su eje es político y de investigación.</td></tr>
+<tr><td>Carrera afín</td><td>UNIVA (Guadalajara): Ciencia Política y Administración Pública.</td><td>Combina política y administración pública, como la licenciatura de la UNAM.</td></tr>
+</table></div>
+<div class="note">No existe un padrón público consultable que permita afirmar que no hay otras instituciones. La lista incluye lo que pude comprobar en las páginas oficiales de cada universidad.</div>
+</section>
+
+<!-- ============ 4. RECONOCIMIENTO ============ -->
+<section id="reconocimiento">
+<p class="kicker">Capítulo 4</p>
+<h2>Reconocimiento: nacional y Jalisco, por separado</h2>
+<p>No existe un ranking oficial por carrera para esta licenciatura. Por eso usé indicadores verificables: acreditaciones, trayectoria del programa, posición de la universidad en rankings y requisitos de calidad del plan.</p>
+<div class="scroll"><table>
+<tr><th>Indicador</th><th>UdeG (CUCEA)</th><th>UNAM (FCPyS)</th><th>Anáhuac</th></tr>
+<tr><td>Acreditación del programa</td><td>CONACE, nivel más alto (17/02/2015), reconocida por COPAES.</td><td>No verifiqué una acreditación vigente del programa.</td><td>Reconocimiento de Validez Oficial (SEP), decreto de 1982.</td></tr>
+<tr><td>Trayectoria</td><td>Programa de la LAGP en CUCEA.</td><td>La facultad inició actividades el 25 de julio de 1951.</td><td>Universidad fundada en 1964.</td></tr>
+<tr><td>Posición institucional (QS)</td><td>Rango 1001-1200 (Rankia).</td><td>Puesto 136 mundial en QS 2026, primera de México.</td><td>Rango 951-1000 (Rankia).</td></tr>
+<tr><td>Calidad exigida al egresado</td><td>EGEL Plus como opción de titulación.</td><td>Idioma e historial de titulación.</td><td>EGEL, inglés y 480 horas de prácticas.</td></tr>
+</table></div>
+<p class="src-line">Los rankings QS miden a la universidad completa, no a esta carrera.</p>
+
+<h3>¿Qué universidad tiene mayor reconocimiento nacional en esta carrera?</h3>
+<p>La UNAM. Su facultad tiene la trayectoria más larga (1951), la universidad ocupa el primer lugar de México en QS 2026 y la licenciatura es la referencia histórica del área. Con la evidencia que pude verificar, es la conclusión más sólida, aunque ningún ranking mide el programa de forma directa.</p>
+
+<h3>¿Cuál tiene mayor reconocimiento en Jalisco?</h3>
+<p>La Universidad de Guadalajara, a través de CUCEA. Es la única que ofrece exactamente esta licenciatura en el estado, tiene la acreditación CONACE del nivel más alto y es la universidad de mayor tamaño de la región. De las otras dos opciones afines, no encontré acreditación publicada del programa.</p>
+</section>
+
+<!-- ============ 5. EMPLEO ============ -->
 <section id="empleo">
-<h2>Empleo y salarios</h2>
-<p>Usé el Compara Carreras del IMCO, que trabaja con datos del INEGI. La carrera aparece ahí como Administración pública. Las cifras de abajo son de la edición 2026, y las tomé de un resumen que cita al IMCO.</p>
-<dl>
-<dt>¿Cuántos egresados son mujeres?</dt>
-<dd>El 50.1% de las personas con esta carrera son mujeres y el 49.9% son hombres, de un total de 45,078 personas, es decir 0.3% de los profesionistas del país.</dd>
-<dt>¿Cuántos están ocupados?</dt>
-<dd>El 98.7% está ocupado, con 1.3% de desempleo y 19.7% de informalidad.</dd>
-<dt>¿En qué trabajan?</dt>
-<dd>El 35.5% trabaja en gobierno y organismos internacionales, el 16.9% en comercio, el 16.4% en servicios sociales (como educación y salud) y el 15.8% en servicios profesionales, financieros y corporativos. Las funciones que prevé el programa son gestión pública, planeación estratégica, evaluación de programas sociales, diseño de políticas de movilidad, seguridad y desarrollo urbano, licitaciones y cumplimiento normativo, y gestión de proyectos en organizaciones civiles. Según CUCEA, los empleadores incluyen gobiernos municipales y estatal, el DIF Jalisco, el IEPC, el IIEG, el Sistema Estatal Anticorrupción y la Comisión Estatal de Derechos Humanos.</dd>
-<dt>¿Cuánto ganan al mes?</dt>
-<dd>Con licenciatura, $18,338 en promedio, con mediana de $16,836. El 25% que menos gana percibe menos de $12,950 y el 25% que más gana, más de $23,311. En empleo formal el promedio es de $20,569 y en informal de $12,115. Con posgrado (maestría o doctorado juntos) el promedio es de $22,968, y el 35.6% de los profesionistas de esta carrera tiene posgrado. IMCO no separa maestría de doctorado, así que no tengo la cifra solo del doctorado.</dd>
-<dt>¿En qué áreas se pagan los sueldos más altos?</dt>
-<dd>No encontré datos por área dentro de la carrera. Lo que sí muestran las cifras es que el empleo formal paga alrededor de 70% más que el informal.</dd>
-</dl>
-<div class="note">Hay una diferencia entre ediciones que no pude explicar. La edición 2025 del IMCO ubicó a Administración pública en el tercer lugar de salarios, con $25,678 al mes. La edición 2026 reporta $18,338. Para el trabajo uso la 2026, que es la más reciente, pero conviene que quien revise la compare directamente en comparacarreras.imco.org.mx.</div>
-</section>
+<p class="kicker">Capítulo 5</p>
+<h2>Empleo: cuántos son, en qué trabajan</h2>
+<p class="lead">Datos de Compara Carreras (IMCO, edición 2026), construido con la ENOE del INEGI. La carrera aparece como “Administración pública”.</p>
 
-<section id="ideas">
-<h2>Otras formas de aprovechar mi profesión</h2>
-<p>Estas son ideas mías, no cifras de una fuente.</p>
+<div class="box">
+<strong>Para no confundir conceptos</strong>
 <ul>
-<li><strong>Consultoría en licitaciones:</strong> ayudar a empresas a preparar propuestas y cumplir requisitos para venderle al gobierno, que necesita quien entienda las reglas de contratación.</li>
-<li><strong>Evaluación de programas con datos:</strong> medir si un programa social o un servicio municipal funciona, usando estadística y herramientas digitales.</li>
-<li><strong>Tecnología cívica:</strong> trabajar con un programador en una herramienta que le explique a la gente trámites, presupuestos o convocatorias, con el administrador público definiendo qué necesita el ciudadano.</li>
-<li><strong>Asesoría a organizaciones civiles:</strong> conseguir fondos, gestionar proyectos y medir su impacto.</li>
+<li><strong>Personas que estudiaron la carrera (45,078):</strong> todas las que cursaron esta licenciatura en el país, de cualquier edad. No son “egresados” de un año.</li>
+<li><strong>Nuevos egresados (1,316):</strong> los que salieron al mercado laboral en el último ciclo escolar.</li>
+<li><strong>Tasa de ocupación (98.7%):</strong> de quienes buscan o tienen trabajo (población económicamente activa), 98.7% tiene empleo y 1.3% está desempleado. No es el porcentaje de todas las personas que estudiaron la carrera.</li>
 </ul>
+</div>
+
+<div class="stats">
+<div class="stat"><div class="num">45,078</div><small>personas estudiaron esta carrera (0.3% de quienes tienen una carrera)</small></div>
+<div class="stat"><div class="num">15,432</div><small>estudiantes inscritos actualmente</small></div>
+<div class="stat"><div class="num">1,316</div><small>nuevos egresados al mercado laboral</small></div>
+<div class="stat"><div class="num">98.7%</div><small>tasa de ocupación</small></div>
+</div>
+
+<h3>Mujeres y hombres que estudiaron la carrera</h3>
+<div class="chart">
+<h4>Distribución por género</h4>
+<div class="row"><span>Mujeres (≈ 22,584)</span><div class="track"><div class="fill" style="width:50.1%">50.1%</div></div></div>
+<div class="row"><span>Hombres (≈ 22,494)</span><div class="track"><div class="fill b" style="width:49.9%">49.9%</div></div></div>
+<p class="src-line">Las cantidades son un cálculo propio (porcentaje × 45,078), redondeado. Fuente: IMCO, Compara Carreras 2026.</p>
+</div>
+
+<h3>Cuántos están ocupados</h3>
+<div class="chart">
+<h4>Situación laboral</h4>
+<div class="row"><span>Ocupados</span><div class="track"><div class="fill" style="width:98.7%">98.7%</div></div></div>
+<div class="row"><span>Desempleados</span><div class="track"><div class="fill b" style="width:1.3%"></div></div></div>
+<div class="row"><span>Informales</span><div class="track"><div class="fill b" style="width:19.7%">19.7%</div></div></div>
+<div class="row"><span>Trabajan en algo relacionado con lo que estudiaron</span><div class="track"><div class="fill" style="width:34%">34.0%</div></div></div>
+<p class="src-line">Desempleo: 1.3%. IMCO no publica el número exacto de ocupados.</p>
+</div>
+
+<h3>En qué trabajan</h3>
+<div class="chart">
+<h4>Sector de empleo</h4>
+<div class="row"><span>Gobierno y organismos internacionales</span><div class="track"><div class="fill" style="width:35.5%">35.5%</div></div></div>
+<div class="row"><span>Comercio</span><div class="track"><div class="fill" style="width:16.9%">16.9%</div></div></div>
+<div class="row"><span>Servicios sociales</span><div class="track"><div class="fill" style="width:16.4%">16.4%</div></div></div>
+<div class="row"><span>Servicios profesionales y financieros</span><div class="track"><div class="fill" style="width:15.8%">15.8%</div></div></div>
+<div class="row"><span>Industria manufacturera</span><div class="track"><div class="fill b" style="width:7.1%">7.1%</div></div></div>
+<div class="row"><span>Otros sectores</span><div class="track"><div class="fill b" style="width:8.3%">8.3%</div></div></div>
+<p class="src-line">“Otros” suma transportes (2.8%), servicios diversos (1.8%), industria extractiva (1.5%), restaurantes (0.9%), agricultura (0.9%) y construcción (0.5%).</p>
+</div>
+
+<div class="chart">
+<h4>Posición en el trabajo</h4>
+<div class="row"><span>Subordinado</span><div class="track"><div class="fill" style="width:81.9%">81.9%</div></div></div>
+<div class="row"><span>Cuenta propia</span><div class="track"><div class="fill b" style="width:10.9%">10.9%</div></div></div>
+<div class="row"><span>Empleador</span><div class="track"><div class="fill b" style="width:6.8%">6.8%</div></div></div>
+<div class="row"><span>Trabajo sin pago</span><div class="track"><div class="fill b" style="width:0.8%"></div></div></div>
+<p class="src-line">Probabilidad de obtener un empleo de calidad: 80.3%.</p>
+</div>
+
+<h3>Principales ocupaciones y funciones</h3>
+<p>La ocupación más cercana a la carrera en el catálogo oficial es “Investigadores y especialistas en ciencias políticas y administración pública”. En el primer trimestre de 2026, Data México registró 19,800 personas en esa ocupación, con salario promedio de $15,200 y 45.8 horas semanales. Es una población distinta a la de egresados, porque en ella también hay personas con otras carreras. Se concentra en tres industrias:</p>
+<div class="chart">
+<h4>Industria de quienes ejercen la ocupación</h4>
+<div class="row"><span>Impartición de justicia, orden público y seguridad</span><div class="track"><div class="fill" style="width:27.3%">27.3%</div></div></div>
+<div class="row"><span>Órganos legislativos</span><div class="track"><div class="fill" style="width:23.2%">23.2%</div></div></div>
+<div class="row"><span>Servicios legales</span><div class="track"><div class="fill" style="width:14.6%">14.6%</div></div></div>
+<p class="src-line">Fuente: Data México, Secretaría de Economía, 2026-T1.</p>
+</div>
+<p><strong>Funciones que realizan,</strong> según los perfiles de egreso de CUCEA y de la UNAM:</p>
+<ul>
+<li>Planeación estratégica y gestión de proyectos públicos.</li>
+<li>Diseño, seguimiento y evaluación de programas y políticas públicas.</li>
+<li>Gestión de recursos gubernamentales, presupuesto y auditoría.</li>
+<li>Asesoría y análisis para decisiones de gobierno.</li>
+<li>Gestión en organizaciones civiles y organismos autónomos.</li>
+</ul>
+<p>Entre los empleadores que menciona CUCEA están los gobiernos municipales y el estatal, el DIF Jalisco, el IEPC, el IIEG, el Sistema Estatal Anticorrupción y la Comisión Estatal de Derechos Humanos.</p>
+<div class="pull">Solo 34% trabaja en algo relacionado con lo que estudió: la carrera abre más puertas que un solo puesto.</div>
 </section>
 
+<!-- ============ 6. SALARIOS ============ -->
+<section id="salarios">
+<p class="kicker">Capítulo 6</p>
+<h2>Cuánto se gana</h2>
+<div class="scroll"><table>
+<tr><th>Concepto</th><th>Salario mensual</th><th>Fuente y nota</th></tr>
+<tr><td>Promedio de la carrera (todos los niveles)</td><td>$18,338</td><td>IMCO 2026. Incluye a quienes tienen posgrado. Mediana: $16,836.</td></tr>
+<tr><td>Solo con licenciatura</td><td>≈ $15,635</td><td>Cálculo propio: $22,968 ÷ 1.469, usando el incremento de 46.9% que reporta IMCO.</td></tr>
+<tr><td>Maestría</td><td>Sin cifra independiente</td><td>IMCO no separa maestría de doctorado. No encontré una fuente oficial para esta carrera.</td></tr>
+<tr><td>Doctorado</td><td>Sin cifra independiente</td><td>Misma limitación.</td></tr>
+<tr><td>Posgrado (maestría y doctorado juntos)</td><td>$22,968</td><td>IMCO 2026. 35.6% de quienes estudiaron la carrera tiene posgrado.</td></tr>
+</table></div>
+<p>Como referencia, a nivel nacional quien tiene maestría o doctorado gana en promedio 49% más que con licenciatura, según un resumen de datos de la OCDE (Education at a Glance 2025). Es un dato de todas las carreras.</p>
+
+<div class="chart">
+<h4>Salario mensual promedio por grupo, en pesos</h4>
+<div class="row"><span>Posgrado</span><div class="track"><div class="fill" style="width:100%">$22,968</div></div></div>
+<div class="row"><span>Empleo formal</span><div class="track"><div class="fill" style="width:89.6%">$20,569</div></div></div>
+<div class="row"><span>Hombres</span><div class="track"><div class="fill" style="width:87.2%">$20,024</div></div></div>
+<div class="row"><span>Promedio de la carrera</span><div class="track"><div class="fill b" style="width:79.8%">$18,338</div></div></div>
+<div class="row"><span>Mujeres</span><div class="track"><div class="fill" style="width:76.6%">$17,588</div></div></div>
+<div class="row"><span>Mayores de 30 años</span><div class="track"><div class="fill" style="width:80.6%">$18,519</div></div></div>
+<div class="row"><span>Empleo informal</span><div class="track"><div class="fill" style="width:52.7%">$12,115</div></div></div>
+<div class="row"><span>Menores de 30 años</span><div class="track"><div class="fill" style="width:47.7%">$10,960</div></div></div>
+<p class="src-line">Fuente: IMCO, Compara Carreras 2026. Carrera en el lugar 50 de ingreso; el salario promedio de los ocupados en México es de $14,170.</p>
+</div>
+
+<h3>Distribución salarial</h3>
+<div class="stats">
+<div class="stat"><div class="num">$12,950</div><small>el 25% que menos gana, menos de esto</small></div>
+<div class="stat"><div class="num">$16,836</div><small>mediana</small></div>
+<div class="stat"><div class="num">$23,311</div><small>el 25% que más gana, más de esto</small></div>
+</div>
+
+<h3>Áreas mejor remuneradas</h3>
+<p>IMCO no publica salario por área dentro de la carrera, así que uso Data México, que mide la ocupación vinculada (2026-T1):</p>
+<div class="scroll"><table>
+<tr><th>Corte</th><th>Mejor remunerado</th><th>Salario</th></tr>
+<tr><td>Industria</td><td>Órganos legislativos</td><td>$18,600</td></tr>
+<tr><td>Industria</td><td>Servicios legales</td><td>$17,000</td></tr>
+<tr><td>Estado</td><td>Ciudad de México</td><td>$20,400</td></tr>
+<tr><td>Estado</td><td>Chihuahua</td><td>$18,000</td></tr>
+<tr><td>Estado</td><td>Hidalgo</td><td>$16,300</td></tr>
+</table></div>
+<div class="note">Estas cifras son de una ocupación con pocos casos y cambian mucho de un trimestre a otro: Data México reporta que el salario cayó 48.5% frente al trimestre anterior. Úsalas como orientación. Además, ediciones anteriores del IMCO publicaron cifras distintas para la misma carrera (por ejemplo, $25,678 en la edición 2025), así que conviene citar siempre la edición.</div>
+<p>Dentro de la carrera, el área mejor pagada es el empleo formal: gana 70% más que el informal ($20,569 frente a $12,115). La brecha de género también pesa: las mujeres ganan 12% menos que los hombres.</p>
+</section>
+
+<!-- ============ 7. OPORTUNIDADES ============ -->
+<section id="oportunidades">
+<p class="kicker">Capítulo 7</p>
+<h2>Más allá del empleo tradicional</h2>
+<p class="lead">Seis formas de ejercer la profesión sin depender de un puesto en una dependencia.</p>
+<dl>
+<dt>Consultoría gubernamental</dt>
+<dd>Como despacho o consultor independiente, se asesora a municipios en organización, planeación y mejora de procesos. Se factura por proyecto o por contrato.</dd>
+<dt>Desarrollo de proyectos municipales</dt>
+<dd>Se diseñan proyectos (alumbrado, residuos, movilidad, espacios públicos) y se preparan para obtener financiamiento y aprobación del cabildo.</dd>
+<dt>Evaluación de políticas públicas</dt>
+<dd>Se mide si un programa cumplió sus metas con indicadores y datos, para dependencias, organismos civiles o instituciones que financian programas.</dd>
+<dt>Administración de recursos públicos</dt>
+<dd>Se trabaja en presupuesto, contabilidad y fiscalización dentro de áreas de finanzas, contraloría u órganos de control.</dd>
+<dt>Consultoría en transparencia</dt>
+<dd>Se apoya a instituciones en cumplir obligaciones de transparencia, datos abiertos y rendición de cuentas, incluso con el Sistema Estatal Anticorrupción.</dd>
+<dt>Emprendimiento tecnológico aplicado al gobierno</dt>
+<dd>Se crea con un equipo técnico una herramienta (portal de trámites, seguimiento de contratos, tablero de datos) y se vende al gobierno como servicio. El administrador público define qué necesita el ciudadano y cómo compra el Estado.</dd>
+</dl>
+</section>
+
+<!-- ============ 8. EMPRESA ============ -->
 <section id="empresa">
-<h2>La empresa en la que seríamos socios</h2>
-<p>Mi motivo principal para estudiar esta carrera es Pranso, la empresa donde trabaja mi papá, dedicada a la venta y renta de maquinaria pesada. Su administración, reparación y servicios dependen en buena parte del gobierno, y su principal producto son los camiones de basura, que los municipios contratan. Ahí vi que quien entiende cómo compra, contrata y evalúa el gobierno tiene ventaja.</p>
-<p>La empresa del equipo se dedicaría a la venta, renta y mantenimiento de maquinaria y vehículos para servicios municipales, como recolección de residuos, con contratos públicos como principal fuente de ingresos.</p>
-<h3>Mi labor como socio</h3>
-<p>Me encargaría de la relación con el gobierno: preparar propuestas de licitación, dar seguimiento a contratos, cuidar que se cumpla la normatividad y evaluar si el servicio entregado cumple lo contratado, para que el contrato se renueve.</p>
-<div class="note"><span class="tag">Completar</span> Aquí van el nombre de la empresa y la labor de cada compañero socio. Esas partes dependen del resto del equipo.</div>
-</section>
+<p class="kicker">Capítulo 8</p>
+<h2>Nuestra empresa: Servicios Públicos Integrales Occidente</h2>
+<p class="lead">Una empresa de limpia y maquinaria para municipios de Jalisco, inspirada en Pranso, la empresa donde trabaja mi papá, que vende y renta maquinaria pesada y cuyo principal ingreso son los contratos con el gobierno.</p>
 
-<section id="reflexion">
-<h2>Reflexión individual</h2>
-<p>Hacer esta investigación me hizo ver mi carrera con más precisión. Entré por la experiencia de la empresa de mi papá y pensaba en gobierno como un cliente. Ahora entiendo que la carrera es más amplia: forma a quien diseña, ejecuta y evalúa lo que el gobierno hace con el dinero de todos.</p>
-<p>Comparar programas me mostró que mi licenciatura se distingue por su enfoque en el ciclo completo de una política pública, y los datos laborales me dieron confianza: casi todos los egresados están ocupados y más de un tercio trabaja en gobierno. También me hizo ser cuidadoso con las cifras, porque dos ediciones del mismo estudio dieron salarios distintos y por eso conviene siempre revisar la fuente.</p>
-<div class="note"><span class="tag">Completar</span> Un párrafo sobre la dinámica del equipo y cómo trabajaron juntos.</div>
-</section>
-
-<section id="fuentes">
-<h2>Fuentes</h2>
-<ul class="src">
-<li>CUCEA, Universidad de Guadalajara. Licenciatura en Administración Gubernamental y Políticas Públicas. https://www.cucea.udg.mx/oferta-academica/licenciatura-en-administracion-gubernamental-y-politicas-publicas</li>
-<li>CUCEA. Plan de estudios (LAGP). https://www.cucea.udg.mx/plan-de-estudios-lagp</li>
-<li>Universidad de Guadalajara, Pregrado. Aspirantes y unidades de aprendizaje de Administración Gubernamental y Políticas Públicas. http://pregrado.udg.mx/Centros/Tem%C3%A1ticos/CUCEA/administracion-gubernamental-y-politicas-publicas-cucea/aspirantes</li>
-<li>CUCEA. Modalidades de titulación aprobadas para la LAGP (13/08/2025). https://www.cucea.udg.mx/storage/uploads/pb/01K95BJCE5HGYFBW996K43VHKD.pdf</li>
-<li>CUCSH, Universidad de Guadalajara. Licenciatura en Estudios Políticos y Gobierno. https://www.cucsh.udg.mx/licenciaturas/licenciatura-en-estudios-politicos-y-gobierno</li>
-<li>UNAM. Comité de la Licenciatura en Ciencias Políticas y Administración Pública, informe 2014-1. https://www.caacs.unam.mx/wp-content/files/Historico/Ciencias%20Politicas%20y%20Administracion%20Publica/2014-1.pdf</li>
-<li>UNAM, FCPyS. Acreditación de idiomas. https://www.abogadogeneral.unam.mx/sites/default/files/archivos/Repositorio/Facultad%20de%20Ciencias%20Pol%C3%ADticas%20y%20Sociales/Acreditacion_Idiomas_FCPyS_250618.pdf</li>
-<li>Universidad Anáhuac. Licenciatura en Administración Pública y Gobierno, plan 2025. https://www.anahuac.mx/mexico/2025/Lic/PlanEstudios/der_apg.pdf</li>
-<li>UNIVA. Licenciatura en Ciencia Política y Administración Pública. https://www.univa.mx/pe/wp-content/uploads/sites/13/2020/03/Insert-gral-lic-pres-C-Politica-y-Admon-Pub.pdf</li>
-<li>Universidad de Guanajuato. Licenciatura en Administración Pública. https://www.ugto.mx:443/images/planes/licenciatura-en-administracion-publica.pdf</li>
-<li>IMCO. Compara Carreras, demanda en universidades públicas. https://comparacarreras.imco.org.mx/las-10-mas/demanda-publica/</li>
-<li>Alumnos Online. Estudiar Gestión y Administración Pública en México (resumen con datos de IMCO, edición 2026). https://alumnosonline.com/carreras-profesionales/gestion-publica-universidad/</li>
-<li>El Imparcial (22/04/2026). IMCO alerta que jóvenes estudian lo mismo desde hace 10 años (edición 2025). https://www.elimparcial.com/dinero/2026/04/22/imco-alerta-que-jovenes-estudian-lo-mismo-desde-hace-10-anos-estas-carreras-ganan-mas-y-tienen-mayor-futuro-laboral/</li>
+<h3>Servicios</h3>
+<ul>
+<li>Recolección de residuos sólidos urbanos bajo contrato municipal.</li>
+<li>Renta y venta de camiones recolectores y maquinaria pesada.</li>
+<li>Mantenimiento, reparación y refacciones de la flota.</li>
+<li>Monitoreo de rutas y reportes de servicio al municipio.</li>
 </ul>
-<p class="src">Consultadas el 15 de noviembre de 2026.</p>
+
+<h3>Cómo funciona</h3>
+<ol>
+<li>Detectamos convocatorias y licitaciones municipales.</li>
+<li>Preparamos la propuesta técnica, legal y económica.</li>
+<li>Firmamos el contrato y desplegamos unidades y personal.</li>
+<li>Operamos y reportamos el servicio.</li>
+<li>Evaluamos resultados y renovamos o ampliamos el contrato.</li>
+</ol>
+
+<h3>Cómo genera ingresos</h3>
+<ul>
+<li>Pago municipal por el servicio de recolección.</li>
+<li>Renta de maquinaria por periodo.</li>
+<li>Venta de unidades y refacciones.</li>
+<li>Servicio de mantenimiento a flotas de terceros.</li>
+</ul>
+
+<h3>Socios, puestos y cómo se relacionan sus carreras</h3>
+<div class="scroll"><table>
+<tr><th>Puesto</th><th>Carrera del socio</th><th>Responsabilidades</th></tr>
+<tr><td>Dirección de Vinculación Gubernamental y Licitaciones (Juan)</td><td>Administración Gubernamental y Políticas Públicas</td><td>Detectar y preparar licitaciones, dar seguimiento a contratos, cuidar el cumplimiento normativo y evaluar si el servicio cumple lo contratado.</td></tr>
+<tr><td>Dirección de Finanzas</td><td>Contaduría o Finanzas</td><td>Costos, presupuesto de propuestas, facturación, cobranza a municipios y control fiscal.</td></tr>
+<tr><td>Dirección de Operaciones y Mantenimiento</td><td>Ingeniería Industrial o Mecánica</td><td>Flota, rutas, taller, seguridad operativa y disponibilidad de unidades.</td></tr>
+<tr><td>Dirección Jurídica</td><td>Derecho</td><td>Contratos, normatividad ambiental y de contratación pública, y responsabilidades legales.</td></tr>
+<tr><td>Dirección de Tecnología y Sustentabilidad</td><td>Informática o Ingeniería Ambiental</td><td>Monitoreo de rutas, reportes de servicio y cumplimiento ambiental.</td></tr>
+</table></div>
+<p>Las carreras se complementan en la cadena del contrato: la mía consigue y evalúa el contrato, Derecho lo blinda, Finanzas lo hace rentable, Operaciones lo ejecuta y Tecnología lo mide. Sin una de ellas, el contrato no se gana o no se cumple.</p>
+</section>
+
+<!-- ============ 9. REFLEXION ============ -->
+<section id="reflexion">
+<p class="kicker">Capítulo 9</p>
+<h2>Reflexiones</h2>
+
+<h3>Mi carrera</h3>
+<p>Entré a esta carrera por la experiencia de mi papá en Pranso. Pensaba en el gobierno como un cliente que contrata maquinaria. Esta investigación me mostró que la carrera es más amplia: forma a quien diseña, ejecuta y evalúa lo que el gobierno hace con el dinero de todos.</p>
+<p>Comparar programas me hizo ver que la LAGP se distingue por el ciclo completo de una política pública, mientras que la UNAM mezcla política y administración, y Anáhuac enfatiza lo jurídico y el liderazgo. Los datos de empleo me dieron tranquilidad: casi todos los que buscan trabajo lo encuentran, y más de un tercio trabaja en gobierno. También me enseñó a ser cuidadoso con las cifras, porque dos ediciones del mismo estudio dieron salarios distintos.</p>
+
+<h3>Trabajar en equipo</h3>
+<p>Armar la empresa me mostró para qué sirve un equipo con carreras distintas. Mi parte, la relación con el gobierno y las licitaciones, no sirve si nadie la hace rentable, la ejecuta o la protege legalmente. Aprendí que cada socio responde por una pieza distinta y que el resultado solo funciona cuando esas piezas se coordinan. En lo personal, me toca aprender a explicar mi trabajo en términos que entienda alguien de otra carrera.</p>
+</section>
+
+<!-- ============ FUENTES ============ -->
+<section id="fuentes">
+<p class="kicker">Referencias</p>
+<h2>Fuentes</h2>
+<p class="src">Todas fueron consultadas el 16 de noviembre de 2026. “s. f.” indica que la página no publica fecha.</p>
+<h3>Universidad de Guadalajara</h3>
+<ul class="src">
+<li>CUCEA, Universidad de Guadalajara. (s. f.). <em>Licenciatura en Administración Gubernamental y Políticas Públicas</em>. https://www.cucea.udg.mx/oferta-academica/licenciatura-en-administracion-gubernamental-y-politicas-publicas</li>
+<li>CUCEA, Universidad de Guadalajara. (s. f.). <em>Plan de estudios (LAGP)</em>. https://www.cucea.udg.mx/plan-de-estudios-lagp</li>
+<li>Universidad de Guadalajara, Coordinación General de Control Escolar. (s. f.). <em>Aspirantes: Administración Gubernamental y Políticas Públicas, CUCEA</em>. http://pregrado.udg.mx/Centros/Tem%C3%A1ticos/CUCEA/administracion-gubernamental-y-politicas-publicas-cucea/aspirantes</li>
+<li>CUCEA, Universidad de Guadalajara. (2025, 13 de agosto). <em>Modalidades de titulación aprobadas para la LAGP</em>. https://www.cucea.udg.mx/storage/uploads/pb/01K95BJCE5HGYFBW996K43VHKD.pdf</li>
+<li>CUCSH, Universidad de Guadalajara. (s. f.). <em>Licenciatura en Estudios Políticos y Gobierno</em>. https://www.cucsh.udg.mx/licenciaturas/licenciatura-en-estudios-politicos-y-gobierno</li>
+</ul>
+<h3>UNAM</h3>
+<ul class="src">
+<li>UNAM. (s. f.). <em>Ciencias Políticas y Administración Pública: carrera en la UNAM</em>. https://oferta.unam.mx/ciencias-politicas-y-admon-pub.html</li>
+<li>UNAM, Facultad de Ciencias Políticas y Sociales. (s. f.). <em>Licenciatura en Ciencias Políticas y Administración Pública (opción Administración Pública)</em>. https://www3.politicas.unam.mx/orientacionvocacional/?page_id=434</li>
+<li>UNAM, Dirección General de Administración Escolar. (s. f.). <em>Descripción sintética del plan de estudios: Licenciatura en Ciencias Políticas y Administración Pública</em>. https://escolar1.unam.mx/planes/f_ciencias_politicas/Ciencpol_sua.pdf</li>
+</ul>
+<h3>Universidad Anáhuac</h3>
+<ul class="src">
+<li>Universidad Anáhuac. (2025). <em>Licenciatura en Administración Pública y Gobierno: Modelo Educativo Anáhuac 2025</em>. https://www.anahuac.mx/mexico/2025/Lic/PlanEstudios/der_apg.pdf</li>
+<li>Mextudia. (s. f.). <em>Anáhuac Licenciatura en Administración Pública y Gobierno</em> (duración de 8 semestres). https://mextudia.com/universidades/universidad-anahuac/licenciatura-en-administracion-publica-y-gobierno/?amp=1</li>
+</ul>
+<h3>Otras universidades de Jalisco</h3>
+<ul class="src">
+<li>UNIVA. (2020). <em>Licenciatura en Ciencia Política y Administración Pública</em>. https://www.univa.mx/pe/wp-content/uploads/sites/13/2020/03/Insert-gral-lic-pres-C-Politica-y-Admon-Pub.pdf</li>
+</ul>
+<h3>Empleo y salarios</h3>
+<ul class="src">
+<li>Instituto Mexicano para la Competitividad (IMCO). (2026). <em>Compara Carreras: Administración pública</em>. https://comparacarreras.imco.org.mx/administración_pública/</li>
+<li>IMCO. (2026). <em>Compara Carreras: las 10 carreras más demandadas (aceptación en universidades públicas)</em>. https://comparacarreras.imco.org.mx/las-10-mas/demanda-publica/</li>
+<li>Secretaría de Economía. (2026). <em>Data México: Investigadores y especialistas en ciencias políticas y administración pública</em> (2026-T1). https://www.economia.gob.mx/datamexico/es/profile/occupation/investigadores-y-especialistas-en-ciencias-politicas-y-administracion-publica</li>
+<li>Mextudia. (2026). <em>Las 10 mejores maestrías en México 2026</em> (cita datos de la OCDE, Education at a Glance 2025). https://mextudia.com/las-10-mejores-maestrias-en-mexico/</li>
+<li>Cursocie. (2026, marzo). <em>Las 10 carreras mejor pagadas en México 2026</em> (cifra de la edición 2025 del IMCO). https://cursocie.com.mx/2026/03/carreras-mejor-pagadas-mexico-2026-unam/</li>
+</ul>
+<h3>Rankings</h3>
+<ul class="src">
+<li>Xataka México. (2026). <em>Las 10 universidades de México mejor calificadas en el mundo, según este ranking</em> (QS 2026). https://www.xataka.com.mx/educacion/15-universidades-mexico-mejor-calificadas-mundo-este-ranking</li>
+<li>Rankia México. (s. f.). <em>Ranking: las 10 mejores universidades de México</em> (posiciones QS de UdeG y Anáhuac). https://www.rankia.mx/blog/mejores-universidades-publicas-paga-mexico/7051068-mejores-universidades-mexico-comparativa-publica-privada-linea</li>
+<li>Wikipedia. (s. f.). <em>School of Political and Social Sciences, UNAM</em> (inicio de actividades en 1951). https://en.wikipedia.org/wiki/School_of_Political_and_Social_Sciences,_UNAM</li>
+</ul>
 </section>
 
 </main>
